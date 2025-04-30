@@ -1,18 +1,26 @@
 package Quiz;
 
 import java.io.File;
-import java.util.Scanner;
-
+import java.util.Scanner; 
 import net.coobird.thumbnailator.Thumbnails;
 
 public class Quiz1 {
 
 	public static void main(String[] args) throws Exception{
 		
+		while(true) {
+		
 		Scanner scan = new Scanner(System.in);
+		
+		 
 		
 		System.out.println("크기를 줄일 파일명을 입력해 주세요.");
 		String str1 = scan.nextLine();
+		
+		if(str1.isEmpty()) {
+			System.out.println("파일이 없습니다. 다시 입력해 주세요");
+			 
+		}
 		
 		System.out.println("변환할 크기의 가로픽셀을 입력해 주세요.");
 		int a = scan.nextInt();
@@ -36,8 +44,9 @@ public class Quiz1 {
 			 e.printStackTrace();
 			 System.out.println("오류가 발생되었습니다.");
 	     }
-		
-		scan.close();
+		 
+		 
+		}
 
 	}
 
